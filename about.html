@@ -1,0 +1,65 @@
+<!-- HTML5 & CSS Development: Learn How to Build a Professional Website |
+Udemy, Jordan Hudgens -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container"> 
+            <div class="nav-wrapper">
+              <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="home.html">Home</a>
+                    </div> 
+
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="about.html">About</a>
+                    </div>
+              </div>
+
+              <div class="right-side">
+                  <div class="brand">
+                      <div>AJANI SANDERS</div>
+                  </div>
+              </div>
+            </div>
+    
+
+    <div class="content-wrapper"> <!-- div content-->
+            <div class="two-column-wrapper">
+                <div class="profile-image-wrapper">
+                    <img src="images/logos/Me.jpg">
+                </div>
+
+                <div class="profile-content-wrapper">
+                    <h1>Hello, I am Ajani Sanders. Thanks for visiting my site.</h1>
+                    <p>Wow I cannot belive this is my first project </p>
+                    <p>Please enjoy my demo website!</p>
+                </div>
+            </div>
+    </div> <!-- Content Wrapper ending div -->
+
+  </div> <!-- Container ending div -->
+</body>
+
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+     portfolioItem.addEventListener('mouseover', () => {
+        console.log(portfolioItem.childNodes[1].classList);
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })   
+
+        portfolioItem.addEventListener('mouseout', () => {
+        console.log(portfolioItem.childNodes[1].classList);
+        portfolioItem.childNodes[1].classList.remove('img-darken');
+        })   
+    })
+</script>
+
+</html>
